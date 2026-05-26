@@ -1,0 +1,66 @@
+/* CSS Style Sheet */
+
+/* change font color */
+body {
+  color: #f7e7c6;
+}
+
+/* change font size */
+p {
+  font-size: 30px;
+  font-family: Arial;
+}
+
+/* change font type */
+h1 {
+  font-size: 50px;
+  color: #fff4d6;
+  font-family: Arial;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: Arial;
+  color: #ffffff;
+  background-color: #c87a12;
+  text-align: center;
+}
+
+/* change background color */
+body {
+  background-color: #8f1418;
+}
+
+/* style for links */
+a {
+  color: #f7e7c6;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* style for nav */
+nav {
+  background-color: #CC5500;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: #f7e7c6;
+  text-decoration: none;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 15px;
+}
+
+nav a:hover {
+  color: #8f1418;
+}
+
+ul, ol {
+  display: inline-block;
+  text-align: left;
+  list-style-position: inside;
+  padding-left: 0;
+}
