@@ -3,6 +3,11 @@
 /* change font color */
 body {
   color: #f7e7c6;
+  margin: 0;
+}
+
+mark{
+    background-color: beige;
 }
 
 /* change font size */
@@ -38,24 +43,41 @@ a {
   font-size: 15px;
 }
 
-/* style for nav */
-nav {
-  background-color: #CC5500;
-  padding: 10px;
-  text-align: center;
+/* CSS Style Sheet for Top Navigation Links */
+
+.top-navigation {
+  background-color: #c87a12;
 }
 
-nav a {
-  color: #f7e7c6;
+/* Remove default list styles */
+.top-navigation ul {
+  list-style: none;
+  padding: 20px;
+  margin: 5px;
+  display: flex;
+  text-align: right;
+}
+
+/* Adjust the spacing between navigation items */
+.top-navigation li {
+  margin-right: 20px;
+}
+
+/* Text color of the links */
+/* Smooth color transition on hover */
+.top-navigation a {
   text-decoration: none;
-  font-family: Arial;
+  color: #ffffff;
   font-weight: bold;
   font-size: 20px;
-  margin: 15px;
+  padding: 20px;
+  transition: color 0.3s ease;
+  font-family: "Arial";
 }
 
-nav a:hover {
-  color: #8f1418;
+/* Change color on hover */
+.top-navigation a:hover {
+  color: #f7d8b9;
 }
 
 ul, ol {
@@ -63,4 +85,27 @@ ul, ol {
   text-align: left;
   list-style-position: inside;
   padding-left: 0;
+}
+
+/* CSS Style Sheet for Gridded Gallery */
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 0;
+  width: 100%;
+}
+
+.gallery-item {
+  box-shadow: rgba(0, 0, 0, 0.1) 0 5px 2px;
+  overflow: hidden;
+  border-radius: 0px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  border-radius: 15px;
 }
