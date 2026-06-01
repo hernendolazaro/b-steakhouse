@@ -4,6 +4,10 @@
 body {
   color: #f7e7c6;
   margin: 0;
+  background-image: url('images/bg.jpg');
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 mark{
@@ -35,6 +39,11 @@ body {
   background-color: #8f1418;
 }
 
+.page-container {
+    width: 95%;
+    margin: 0 auto;
+}
+
 /* style for links */
 a {
   color: #f7e7c6;
@@ -51,16 +60,16 @@ a {
 
 /* Remove default list styles */
 .top-navigation ul {
-  list-style: none;
-  padding: 20px;
-  margin: 5px;
-  display: flex;
-  text-align: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 /* Adjust the spacing between navigation items */
 .top-navigation li {
-  margin-right: 20px;
+    margin: 0;
 }
 
 /* Text color of the links */
@@ -72,11 +81,13 @@ a {
   font-size: 20px;
   padding: 20px;
   transition: color 0.3s ease;
-  font-family: "Arial";
+  font-family: Arial;
 }
 
 /* Change color on hover */
 .top-navigation a:hover {
+  background-color: #c87a12;
+  border-radius: 7px;    
   color: #f7d8b9;
 }
 

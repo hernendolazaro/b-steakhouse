@@ -3,6 +3,46 @@
 
 <head>
   <title>B-Steakhouse</title>
+    <style type="text/css">
+
+    #slider {overflow: hidden;}
+    #slider figure {
+        position: relative;
+        width: 600%;
+        margin: 0;
+        left: 0;
+        animation: 18s slider infinite;
+    }
+
+    #slider figure img {
+        float: left;
+        width: 16.666%;
+    }
+
+    @keyframes slider{
+        0% {left: 0;}
+        13% {left: 0;}
+
+        16% {left: -100%;}
+        29% {left: -100%;}
+
+        33% {left: -200%;}
+        46% {left: -200%;}
+
+        50% {left: -300%;}
+        63% {left: -300%;}
+
+        66% {left: -400%;}
+        79% {left: -400%;}
+
+        83% {left: -500%;}
+        96% {left: -500%;}
+
+        100% {left: 0;}
+    }
+
+</style>
+    <link rel="stylesheet" href="style.css">    
 </head>
 
 <body>
@@ -18,15 +58,19 @@
       
   </ul>
 </nav>
-    <link rel="stylesheet" href="style.css">
 
-  <img src="images/row1.jpg" width="100%" height="100%">
-
- <hr>
-
-  <h2>Welcome to B-Steakhouse</h2>
-
-  <p>
+<div id="slider">
+    <figure>
+    <img src="slideshow/Steak1.png" width="100%" height="100%">
+    <img src="slideshow/Steak2.png" width="100%" height="100%">
+    <img src="slideshow/Steak3.png" width="100%" height="100%">
+    <img src="slideshow/Steak4.png" width="100%" height="100%">
+    <img src="slideshow/Steak5.png" width="100%" height="100%">
+    <img src="slideshow/Steak6.png" width="100%" height="100%">
+    </figure>    
+</div>
+<div class="page-container">
+  <p align="center">
     At B-Steakhouse, we bring together the bold flavors of premium international beef
     and the comforting inspiration of Filipino bistek. From rich marbling to expertly
     grilled perfection, every steak is crafted to deliver a world-class dining experience.
@@ -35,7 +79,6 @@
   <br>
   <figure>
     <div style="text-align: right">
-
     
     <a href="Menu.html" target="_blank">
       <img src="images/australian-ribeye.jpg" width="500" >
@@ -112,7 +155,7 @@
       and the bold flavor of strip steak in one legendary cut.
     </p>
   </blockquote>
-
+    </div>
   <footer>
     <b>Come visit us at 6121 West Park Boulevard, Plano, TX 75093</b>
   </footer>
