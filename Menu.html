@@ -3,48 +3,137 @@
 
 <head>
   <title>B-Steakhouse</title>
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #slider {
+      overflow: hidden;
+      width: 100%;
+      max-width: 900px;
+      margin: 1.5rem auto;
+      border-radius: 8px;
+      position: relative;
+    }
+
+    #slider figure {
+      position: relative;
+      width: 100%;
+      margin: 0;
+    }
+
+    #slider figure img {
+      display: none;
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+    }
+
+    #slider figure img.active {
+      display: block;
+    }
+
+    .slider-controls {
+      text-align: center;
+      margin: 0.5rem 0 1.5rem;
+    }
+
+    .slider-controls button {
+      background: #c0392b;
+      color: #fff;
+      border: none;
+      padding: 0.4rem 1.1rem;
+      margin: 0 0.3rem;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .slider-controls button:hover {
+      background: #a93226;
+    }
+  </style>
 </head>
 
 <body>
 
   <h1>B-Steakhouse</h1>
-<nav class="top-navigation">
-  <ul>
-      
-  <li><a href="index.html">Home</a></li>
-  <li><a href="Menu.html">Menu</a></li>
-  <li><a href="Gallery.html">Gallery</a></li>
-  <li><a href="About.html">About</a></li>
-      
-  </ul>
-</nav>
 
-<div style="text-align: center; list-style-position: inside;">
-  <h2>Signature Steaks</h2>
-  <ul>
-    <li>Australian Wagyu Ribeye</li>
-    <li>Japanese A5 Wagyu Striploin</li>
-    <li>Brazilian Picanha</li>
-    <li>USDA Prime T-Bone Steak</li>
-  </ul>
+  <nav class="top-navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Menu.html">Menu</a></li>
+      <li><a href="Gallery.html">Gallery</a></li>
+      <li><a href="About.html">About</a></li>
+    </ul>
+  </nav>
 
-  <h2>Appetizers</h2>
-  <ol>
-    <li>Beef Bone Marrow</li>
-    <li>Steak Tartare</li>
-    <li>Lobster Bisque</li>
-    <li>Crispy Calamari</li>
-  </ol>
+  <!-- Image Slider -->
+  <div id="slider">
+    <figure>
+      <img src="slideshow/Steak1.png" alt="Steak 1">
+      <img src="slideshow/Steak2.png" alt="Steak 2">
+      <img src="slideshow/Steak3.png" alt="Steak 3">
+      <img src="slideshow/Steak4.png" alt="Steak 4">
+      <img src="slideshow/Steak5.png" alt="Steak 5">
+      <img src="slideshow/Steak6.png" alt="Steak 6">
+    </figure>
+  </div>
 
-  <h2>Drinks</h2>
-  <ol type="A">
-    <li>Old Fashioned</li>
-    <li>Barrel-Aged Negroni</li>
-    <li>Cabernet Sauvignon</li>
-    <li>San Pellegrino Sparkling</li>
-  </ol>
-    </div>
+  <div class="slider-controls">
+    <button onclick="showImage(currentIndex - 1)">&#8592; Prev</button>
+    <button onclick="showImage(currentIndex + 1)">Next &#8594;</button>
+  </div>
+  <!-- End Slider -->
+
+  <div style="text-align: center; list-style-position: inside;">
+    <h2>Signature Steaks</h2>
+    <ul>
+      <li>Australian Wagyu Ribeye</li>
+      <li>Japanese A5 Wagyu Striploin</li>
+      <li>Brazilian Picanha</li>
+      <li>USDA Prime T-Bone Steak</li>
+    </ul>
+
+    <h2>Appetizers</h2>
+    <ol>
+      <li>Beef Bone Marrow</li>
+      <li>Steak Tartare</li>
+      <li>Lobster Bisque</li>
+      <li>Crispy Calamari</li>
+    </ol>
+
+    <h2>Drinks</h2>
+    <ol type="A">
+      <li>Old Fashioned</li>
+      <li>Barrel-Aged Negroni</li>
+      <li>Cabernet Sauvignon</li>
+      <li>San Pellegrino Sparkling</li>
+    </ol>
+  </div>
+
+  <script>
+    let currentIndex = 0;
+    const images = document.querySelectorAll('#slider figure img');
+
+    function showImage(index) {
+      currentIndex = (index + images.length) % images.length;
+      images.forEach((image, i) => {
+        if (i === currentIndex) {
+          image.classList.add('active');
+        } else {
+          image.classList.remove('active');
+        }
+      });
+    }
+
+    function transitionImages() {
+      setInterval(() => {
+        showImage(currentIndex + 1);
+      }, 4000);
+    }
+
+    showImage(0);
+    transitionImages();
+  </script>
+
 </body>
-
 </html>
